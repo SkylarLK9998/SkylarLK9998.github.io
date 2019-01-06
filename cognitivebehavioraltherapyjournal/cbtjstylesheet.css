@@ -8,10 +8,12 @@ html{
 	font: Arial;
 	padding-right: 10%;
 	padding-left: 10%;
+	align-items: center;
 }
 
 div{
 	text-align: center;
+	align-self: center;
 }
 
 h1{
@@ -38,9 +40,11 @@ textarea{
 }
 
 #newEntry{
+	margin: auto
 	width: 100%;
 	height: 80%;
 	align-items: center;
+	align-self: center;
 	color: #001933;
 	background-color: #ffedc9;
 	padding-left: 5%;
@@ -48,6 +52,7 @@ textarea{
 }
 
 #oldEntries{
+	margin: auto
 	width: 100%;
 	height: 80%;
 	align-items: center;
