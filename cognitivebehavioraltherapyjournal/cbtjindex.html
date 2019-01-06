@@ -2,38 +2,29 @@
 <html>
 	<head>
 		<title>Cognitive Therapy X</title> <!--um... Ask Shannon for a title-->
-		<!-- <script src="table/src/Table.js"></script> -->
 		<script src="cbtjmain.js"></script>
 		<link rel="stylesheet" type="text/css" href="cbtjstylesheet.css">
 	</head>
 	<body>
-		<!--I'll make this aesthetically pleasing later-->
 		<h1>
 			Welcome to the Cognitive Therapy X!
 		</h1>
-		<h3>
-			This is a web-based 3-column thought record for cognitive behavioral therapy. What would you like to do?
-		</h3>
-
-		<!--These buttons change the newEntry and Old Entries height from 0 to some height I haven't figured out yet-->
-		<div id="buttons">
-			<button id="NEB"> New Journal Entry</button>
-			<button id="OEB"> View Previous Journal Entries</button>
+		<div class="buttons">
+			<button id="NEB" onclick="newEntry();"> New Journal Entry</button>
+			<button id="OEB" onclick="viewOldEntries();"> View Previous Journal Entries</button>
+<!-- 			<button id="EEB" onclick="exportOldEntries();"> Export Previous Journal Entries</button> -->
 		</div>
-		<ul>
-			<li>Record your automatic negative thoughts in the column on the left</li>
-			<li>Use the selection menu in the center column to select the cognitive distortion type</li>
-			<li>Write a realistic alternative to your automatic negative thoughts in the right column</li>
-		</ul>
-		<div id="newEntry" class="row"> <!--if NEB is pressed this div opens-->
-			<div class="column">
-				Automatic Negative Thoughts <br>
-				<textarea id="ANTData"></textarea>
-			</div>
-			<div class="column">
-				Cognitive Distortion <br>
+		<div id="newEntry" hidden="true"> <!--if NEB is pressed this div opens-->
+				<!-- Please use the selection menu in the center column to select the Cognitive Distortion type and then select next
+
+Please write a realistic alternative to your Automatic Negative Thoughts in the text area and then select next
+				 -->
+				<p>Please describe your Automatic Negative Thoughts in the first text area</p>
+				<textarea id="txt1"></textarea>
+				<br>
+				<p>Please use the selection menu in the center column to select the Cognitive Distortion type and then select next</p>
 				<select id="CDSelection">
-					<option">Mind Reading</option>
+					<option>Mind Reading</option>
 					<option>Labeling</option>
 					<option>Predicting the Future</option>
 					<option>Shoulds</option>
@@ -43,36 +34,19 @@
 					<option>Personalization</option>
 					<option>Overgeneralization</option>
 				</select>
-			</div>
-			<div class="column">
-				Response <br>
-				<textarea id="ResponseData"></textarea>
-			</div>
-		</div>
-		<button id="addEntry">Add Entry to Journal</button>
+				<br>
+				<p>Please write a realistic alternative to your Automatic Negative Thoughts in the second text area</p>
+				<textarea id="txt2"></textarea>
+				<br>
+				<button onclick="addJournalEntry();">Add Entry to Journal</button>
 
-<!-- 		<div id="oldEntries" ng-controller="mainCtrl"> If OEB is pressed, this div opens
-			
-			<table st-table="rowCollection" class="table table-striped">
-	    		<thead>
-	      			<tr>
-		      			<th>Date</th>
-		      			<th>Automatic Negative Thought</th>
-		      			<th>Cognitive Distortion</th>
-	      				<th>Response</th>
-	      				<th>Delete Entry</th>
-      				</tr>
-    			</thead>
-    			<tbody>
-      				<tr ng-repeat="row in rowCollection">
-      					<td>{{row.Date}}</td>
-        				<td>{{row.AutomaticNegativeThougths}}</td>
-      					<td>{{row.CognitiveDistortion}}</td>
-    	  				<td>{{row.Response}}</td>
-      					<td>delete</td>
-      			 	</tr>
-	   			</tbody>
-    		</table>
-		</div> -->
+		</div>
+		<div id="oldEntries" hidden="true">
+			<br>
+			<textarea id="oes" disabled="disabled">
+				
+			</textarea>
+			<br>
+		</div>
 	</body>
 </html>
