@@ -1,4 +1,6 @@
 body {
+    background-color: #e2ffe9;
+    object-fit: cover;
     font-family: "Lato", sans-serif;
 }
 
@@ -8,16 +10,15 @@ body {
     width: 200px;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #f9c5dg;
+    top: 10%;
+    right: 0;
     overflow-x: hidden;
     padding-top: 20px;
 }
 
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    padding: 0px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
@@ -35,14 +36,34 @@ body {
     color: #f1f1f1;
 }
 
-
-.main {
-    margin-left: 200px; 
-    font-size: 20px; 
-    padding: 0px 10px;
+.sidetext{
+    width: 180px;
+    padding-left: 10px;
 }
 
 
+#main {
+    top: 10%;
+    font-size: 20px; 
+    padding-left: 10px;
+    max-width: 100%
+    left: 0;
+}
+
+.meme{
+    max-width: 100%
+    padding-right: : 200px; 
+    object-fit: contain;
+    align-items: center;
+    margin: auto;
+}
+
+#currmeme{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: auto;
+}
 
 .fa-caret-down {
     float: right;

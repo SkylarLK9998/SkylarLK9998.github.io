@@ -2,39 +2,61 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="mmstylesheet.css" >
 <script type="text/javascript" src="mmmain.js"></script>
 </head>
 <body>
-
-<div class="sidenav">
-  <a href="triggers.html">Add Triggers</a>
-  <a href="triggers.html">Delete Triggers</a>
-  <a href="triggers.html">View Triggers</a>
-  <a href="upload.html">Upload Memes</a>
-  
- 
-</div>
-
-<div class="main">
-  <center><h2>Meme Medicine</h2></center>
-  <div class="slideshow-container">
-      <div class="meme" onload="displaymemes()">
-         <img id="currmeme" src="">
+<div><center><h2 style="font-size: 48px">Meme Medicine</h2></center></div>
+<table>
+  <tr>
+    <td width="auto">
+      <div id="main">
+        <div class="slideshow-container" style="align-items: center;">
+          <div class="meme" onload="displaymemes()">
+            <img id="currmeme" src="">
+          </div>
+        </div>
+        <div style="float: right;">
+          <a onclick="leftClick()"><i class="fas fa-caret-left"></i></a>
+          <a onclick="rightClick()"><i class="fas fa-caret-right"></i></a>
+          <a><i class="fas fa-flag"></i></a> 
+        </div>
+        <div onmouseleave="closeImgTriggers();">
+          <div id="tagspopup" hidden="true">
+            <textarea id="tags" style="color: #07380b;" readonly="readonly"></textarea>
+          </div>
+          <a onmouseover="openImgTriggers();">view tags for this image</a>
+        </div>
       </div>
-  </div>
-  <a onclick="rightClick()">&#9664;</a>
-  <a onclick="leftClick()">&#9654;</a>
-  <p><a target="_blank" title="Report" href="report page">
-    <img alt="report" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJHSURBVGhD7do9aBRhFIXh9QeFqLERDaKdYCGmUEghigQDFoKFWNhZKViIKYRACEIKSSC9oFgIFhaSQjCQJhYqgiAIYiGIIIiNomIhRtEk7y0uHD6yO/szM3sH5sDTTGZnOczO7Hdn02gz2/EUq7hjG6qaKVgJN4xKZgZa5CQqmbTID8xiLyqVtIj7g3s4hEqkWRG3gscYRehkFVGvcAGbEC5pkUu4i2XZlvqAq9iGMEmLHIdlCDfxHfp39Q22zx70Pc2KeHZgHB+h+6nfuI2D6Fuying2w66P19D91X88wgmUnnaLaMawCLuj6WvVC5zDRpSSbop4bDlzH3+hx1DvcQUDKDS9FPHsxxx+Qo+lvuAGdqGQ5FHEsxMT+Aw9pvqFWziAXJNnEc8WXMRb6LGV3RgeYgS5pIging04gyfQ90jZPHQWPd0YiixiOYoH+Ad9H/UOl7EVXaeIInYmTmMJeuzUM/R8Jjx5FvFr4w30mMqujXkcQ67Jo8ggruMT9FiqsLuVp5ci+5D1/fEV09iNQtNNkcOw6dGmSH2tKu0b3dNJkVPIWmO9xHmUtsbyZBXxVa9Nh7qf6uuq19OsiE1/19BqDrEp0qbJvs4hnrSIfSxs6rPpT7crnwxtigyTtEirz7+dnXCzuictsh5/emLXS9g0K2JnZgHhn2d50iL+hNG+KyqVtIgt9iqZtEgnS5RQqYtES10kWuoi0VIXiZa6SLTURaKlLhItk9AiR1DJ2LNY+1nMSjxHyP9qaDf2W7qdiYAPFxqNNbL8kKIVlEmgAAAAAElFTkSuQmCC" border=0></a></p> 
-  <div>
-      <p>tags for this image</p>
-        <textarea rows="10" cols="50" id="tags" readonly="readonly">
-        
-        </textarea>
-  </div>
-</div>
-
+    </td>
+    <td width="200px"><div class="sidenav">
+      <div onmouseleave="closeAddTriggers();">
+      <a onmouseover="openAddTriggers();">Add Triggers</a>
+        <div id="addTrigs" hidden="true">
+          <p>Please separate triggers with a comma</p>
+          <textarea class="sidetext" id="newTrig"></textarea>
+          <button onclick="addTrigger();">Add Triggers</button>
+        </div>
+      </div>
+      <div onmouseleave="closeDelTriggers();">
+        <a onmouseover="openDelTriggers();">Delete Triggers</a>
+        <div id="delTrigs" hidden="true">
+          <p>Please separate triggers with a comma</p>
+          <textarea class="sidetext" id="oldTrig"></textarea>
+          <button onclick="removeTrigger();">Delete Triggers</button>
+        </div>
+      </div>
+      <div onmouseleave="closeViewTriggers();">
+        <a onmouseover="openViewTriggers();">View Triggers</a>
+        <div id="vTrigs" hidden="true">
+          <textarea class="sidetext" readonly="true" id="triggerList"></textarea>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+</table>
 </body>
 </html>

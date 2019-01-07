@@ -72,27 +72,79 @@ function displaymemes(){
         loaded=true;
         curMeme=0;
     }
+    closeViewTriggers();
     var showThis = showThese[curMeme];
-    document.getElementById("currmeme").src = showThis.img;
-    var tags = [showThis.tag1, showThis.tag2, showThis.tag3];
-    document.getElementById("tags").value= tags.toString();
-    
+    var cmeme = document.getElementById("currmeme")
+    cmeme.src = showThis.img;
+}
+
+function openAddTriggers(){
+    document.getElementById("addTrigs").hidden = false;
+}
+
+function openDelTriggers(){
+    document.getElementById("delTrigs").hidden = false;
+}
+
+function openViewTriggers(){
+    document.getElementById("vTrigs").hidden = false;
+}
+
+function closeAddTriggers(){
+    document.getElementById("addTrigs").hidden = true;
+}
+
+function closeDelTriggers(){
+    document.getElementById("delTrigs").hidden = true;
+}
+
+function closeViewTriggers(){
+    document.getElementById("vTrigs").hidden = true;
 }
 
 function addTrigger(){
     var trig = document.getElementById("newTrig").value;
-    triggers.push(trig);
+    trig.replace(/\s/g, "");
+    trig = trig.toLowerCase();
+    var trgLst = trig.split(",")
+    for(var i=0; i<trgLst.length; i++){
+        triggers.push(trgLst[i]);
+    }
+    if(triggers.includes("green")){
+            document.body.style.backgroundColor = "#f9f9f9";
+    }
     fillTriggerList();
+    document.getElementById("newTrig").value = "";
 }
 
 function removeTrigger(){
     var trig = document.getElementById("oldTrig").value;
-    for(i=0;i<triggers.length;i++){
-        if(trig===triggers[i]){
-            triggers.splice(i,1);
+    trig.replace(/\s/g, "");
+    trig = trig.toLowerCase();
+    var rmvLst = trig.split(",")
+    for(i=0;i<triggers.length; i++){
+        for(j=0; j<rmvLst.length; j++){
+            if(triggers[i]===rmvLst[j]){
+                triggers.splice(i,1);
+            }
         }
     }
+    if(rmvLst.includes("green")){
+            document.body.style.backgroundColor = "#e2ffe9";
+    }
     fillTriggerList();
+    document.getElementById("oldTrig").value = "";
+}
+
+function openImgTriggers(){
+    var tags = [showThis.tag1, showThis.tag2, showThis.tag3];
+    var tagspot = document.getElementById("tags")
+    tagspot.value = tags.toString();
+    document.getElementById("tagspopup").hidden = false;
+}
+
+function closeImgTriggers(){
+    document.getElementById("tagspopup").hidden = true;
 }
 
 //updates trigger list text area box on triggers.html
@@ -100,12 +152,32 @@ function fillTriggerList(){
     var tl = triggers.toString();
     document.getElementById("triggerList").value=tl;
 }
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+    if (e.keyCode == '37') {
+       leftClick();
+    }
+    else if (e.keyCode == '39') {
+       rightClick();
+    }
+
+}
+
 window.onload = function() {
     if(localStorage.getItem("Triggers")!==null){
         triggers = JSON.parse(localStorage.getItem("Triggers"));
+        if(triggers.includes("green")){
+            document.body.style.backgroundColor = "#f9f9f9";
+        }
     }else{
         triggers = [];
     }
+    displaymemes();
+    fillTriggerList();
 };
 
 window.onunload = function() {
