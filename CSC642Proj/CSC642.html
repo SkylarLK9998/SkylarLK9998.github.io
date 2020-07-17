@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skylar Krieger CSC642 Individual Assigment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!--    <link rel="stylesheet" type="text/css" href="stylesheet.css" >-->
+<!--    <script type="text/javascript" src="main.js"></script>-->
+</head>
+<body>
+<div>
+<h1>CSC 642 Summer 2020 Individual Assignment Skylar Krieger Data survey form</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Address" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-1">
+                <label for="month">Month</label>
+                <select id="month" class="form-control" required>
+                    <option selected>Choose Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="day">Day</label>
+                <input type="text" class="form-control" id="day" placeholder="Day" required>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="year">Year</label>
+                <input type="text" class="form-control" id="year" placeholder="year" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="educationLevel">Education Level</label>
+            <select id="educationLevel" class="form-control">
+                <option selected>Choose...</option>
+                <option>High School</option>
+                <option>College</option>
+                <option>Graduate Studies</option>
+                <option>Ph.D</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-md-1">
+                <label for="feet">Day</label>
+                <input type="text" class="form-control" id="feet" placeholder="Day" required>
+            </div>
+            <div class="form-group col-md-1">
+                <label for="inches">Year</label>
+                <input type="text" class="form-control" id="inches" placeholder="year" required>
+            </div>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
