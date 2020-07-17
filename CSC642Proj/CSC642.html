@@ -9,23 +9,25 @@
     <!--    <link rel="stylesheet" type="text/css" href="stylesheet.css" >-->
 <!--    <script type="text/javascript" src="main.js"></script>-->
 </head>
-<body>
+<body background-color="#330066">
 <div>
 <h1>CSC 642 Summer 2020 Individual Assignment Skylar Krieger Data survey form</h1>
     <form>
         <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label for="firstName">First Name</label>
                 <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <label for="lastName">Last Name</label>
                 <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
             </div>
         </div>
-        <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="Address" required>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Address" required>
+            </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-1">
@@ -55,29 +57,49 @@
                 <input type="text" class="form-control" id="year" placeholder="year" required>
             </div>
         </div>
-        <div class="form-group">
-            <label for="educationLevel">Education Level</label>
-            <select id="educationLevel" class="form-control">
-                <option selected>Choose...</option>
-                <option>High School</option>
-                <option>College</option>
-                <option>Graduate Studies</option>
-                <option>Ph.D</option>
-            </select>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="educationLevel">Education Level</label>
+                <select id="educationLevel" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>High School</option>
+                    <option>College</option>
+                    <option>Graduate Studies</option>
+                    <option>Ph.D</option>
+                </select>
+            </div>
         </div>
-        <div class="form-group">
+        <div class="form-row">
             <div class="form-group col-md-1">
-                <label for="feet">Day</label>
-                <input type="text" class="form-control" id="feet" placeholder="Day" required>
+                <label for="feet">Height</label>
+                <input type="text" class="form-control" id="feet" placeholder="Feet">
             </div>
             <div class="form-group col-md-1">
-                <label for="inches">Year</label>
-                <input type="text" class="form-control" id="inches" placeholder="year" required>
+                <label for="inches" style="opacity: 0">Height</label>
+                <input type="text" class="form-control" id="inches" placeholder="Inches">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="confirmEmail">Confirm Email</label>
+                <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm Email" required>
             </div>
         </div>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input type="checkbox" class="form-check-input" id="termsAndConditions" required>
+            <label class="form-check-label" for="termsAndConditions">I agree to the Terms and Conditions</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
