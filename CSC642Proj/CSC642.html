@@ -22,8 +22,8 @@
     </style>
 </head>
 <body>
-<div id="form" class="content">
-<h1>CSC 642 Summer 2020 Individual Assignment Skylar Krieger Data survey form</h1>
+<div id="form" class="content needs-validation">
+<h1 align="center">CSC 642 Summer 2020 Individual Assignment Skylar Krieger Data survey form</h1>
 <h6>Fields marked with * are mandatory</h6>
     <form action="CSC642Results.html">
         <div class="form-row">
@@ -169,7 +169,7 @@
             <div class="form-group col-md-4">
                 <label for="educationLevel">Education Level</label>
                 <select id="educationLevel" class="form-control">
-                    <option selected>Choose...</option>
+                    <option selected>Select</option>
                     <option>High School</option>
                     <option>College</option>
                     <option>Graduate Studies</option>
@@ -196,6 +196,24 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     <script>
+        // (function() {
+        //     'use strict';
+        //     window.addEventListener('load', function() {
+        //         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        //         var forms = document.getElementsByClassName('needs-validation');
+        //         // Loop over them and prevent submission
+        //         var validation = Array.prototype.filter.call(forms, function(form) {
+        //             form.addEventListener('submit', function(event) {
+        //                 if (form.checkValidity() === false) {
+        //                     event.preventDefault();
+        //                     event.stopPropagation();
+        //                 }
+        //                 form.classList.add('was-validated');
+        //             }, false);
+        //         });
+        //     }, false);
+        // })();
+
         window.onunload = function(){
             let results = [
                 document.getElementById("firstName").value,
