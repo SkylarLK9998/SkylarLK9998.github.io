@@ -8,31 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <!--    <script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
     <script>
-        function submit() {
-            console.log("submit was called");
-            const fName = document.getElementById("firstName").value;
-            const lName = document.getElementById("lastName").value;
-            const address = document.getElementById("address").value;
-            const month = document.getElementById("month").value;
-            const day = document.getElementById("day").value;
-            const year = document.getElementById("year").value;
-            const education = document.getElementById("educationLevel").value;
-            const feet = document.getElementById("feet").value;
-            const inches = document.getElementById("inches").value;
-            const phone = document.getElementById("phoneNumber").value;
-            const email = document.getElementById("email").value;
-            const terms = document.getElementById("termsAndConditions").value;
-            const key = "AIzaSyDTXyyDJHuRu6NFtEewIhV6FAyoPXy2q_o";
-            document.getElementById("fullName").value = "First and Last Name: " + fName + lName;
-            document.getElementById("eml").value = "Email: " + email;
-            document.getElementById("dob").value = "Date of Birth: " + month + " " + day + " " + year;
-            document.getElementById("edu").value = "Education Level: " + education;
-            document.getElementById("tallness").value = "Height: " + feet + " feet " + inches + " inches";
-            document.getElementById("addr").value = "Address: " + address;
-            document.getElementById("map").src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTXyyDJHuRu6NFtEewIhV6FAyoPXy2q_o&callback=initMap";
-            document.getElementById("results").hidden = false;
-            document.getElementById("form").hidden = true;
-        }
+
     </script>
     <style>
         html{
@@ -53,7 +29,7 @@
     </style>
 </head>
 <body>
-<div id="results" class="content" hidden>
+<div id="results" class="content">
 <h1>Results Verification Page</h1>
     <ul>
         <li id="fullName">First and Last Name: </li>
@@ -73,30 +49,6 @@
         //         document.getElementById('map'), {zoom: 8, center: location});
         //     let marker = new google.maps.Marker({position: location, map: map});
         // }
-        function submit2() {
-            const fName = document.getElementById("firstName");
-            const lName = document.getElementById("lastName");
-            const address = document.getElementById("address");
-            const month = document.getElementById("month");
-            const day = document.getElementById("day");
-            const year = document.getElementById("year");
-            const education = document.getElementById("educationLevel");
-            const feet = document.getElementById("feet");
-            const inches = document.getElementById("inches");
-            const phone = document.getElementById("phoneNumber");
-            const email = document.getElementById("email");
-            const terms = document.getElementById("termsAndConditions");
-            const key = "AIzaSyDTXyyDJHuRu6NFtEewIhV6FAyoPXy2q_o";
-            document.getElementById("fullName").value = "First and Last Name: " + fName + lName;
-            document.getElementById("eml").value = "Email: " + email;
-            document.getElementById("dob").value = "Date of Birth: " + month + " " + day + " " + year;
-            document.getElementById("edu").value = "Education Level: " + education;
-            document.getElementById("tallness").value = "Height: " + feet + " feet " + inches + " inches";
-            document.getElementById("addr").value = "Address: " + address;
-            document.getElementById("map").src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDTXyyDJHuRu6NFtEewIhV6FAyoPXy2q_o&callback=initMap";
-            document.getElementById("results").hidden = false;
-            document.getElementById("form").hidden = true;
-        }
     </script>
     <!--Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
