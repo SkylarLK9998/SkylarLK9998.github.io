@@ -12,10 +12,9 @@ body{
 
 .topnav {
 	background-color: #0a0b0c;
-	height: 40px;
 	float: center;
 	width: 100%;
-	font-family: "Lucida Sans Typewriter", monospace;
+	color: #f7f7f7;
 }
 
 .topnav table{
@@ -45,7 +44,6 @@ body{
 }
 
 .bodyouter{
-	height: 80%;
 	padding-right: 10%;
 	padding-left: 10%;
 	align-items: center;
@@ -76,5 +74,12 @@ footer{
    	min-width: 100%;
 	background-color: #0a0a0a;
 	color: #f7f7f7;
+	float: left;
+}
 
+.contact{
+	color: #f7f7f7;
+	font-size: larger;
+	text-decoration: none;
+	min-width: 20%
 }
