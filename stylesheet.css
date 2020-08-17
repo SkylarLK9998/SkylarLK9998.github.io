@@ -1,13 +1,11 @@
 html{
 	height: 100%;
 	background-size: cover;
-	background-color: #202020;
 	/* background-image: linear-gradient(#0a0a0a, #282828, #666666); */
 	background-repeat: no-repeat;
 	/*font-family: "Lucida Sans Typewriter", monospace;*/
 }
 body{
-	background-color: #202020;
 	height: 100%;
 	width: cover;
 }
@@ -17,32 +15,6 @@ body{
 	float: center;
 	width: 100%;
 	color: #f7f7f7;
-}
-
-.topnav table{
-	width: 100%;
-	border-collapse: collapse;
-	border: 1px solid #f7f7f7;
-}
-
-.topnav td{
-	width: 25%;
-	min-width: 163px;
-	text-align: center;
-	border: 1px solid #f7f7f7;
-/*	border-left: 2px;
-	border-right: 2px;*/
-	/*float: center;*/
-}
-
-.topnav a {
-	color: #f7f7f7;
-	font-size: 30px;
-/*	padding: 5px 20px 5px 20px;*/
-	text-decoration: none;
-	/*text-align: center;*/
-	float: center;
-
 }
 
 .bodyouter{
