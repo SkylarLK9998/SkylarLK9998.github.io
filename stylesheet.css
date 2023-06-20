@@ -1,8 +1,9 @@
 html{
 	height: 100%;
 	background-size: cover;
-	/* background-image: linear-gradient(#0a0a0a, #282828, #666666); */
-	background-repeat: no-repeat;
+	background: linear-gradient(90deg, #515ada 0%, #efd5ff 100%);
+	background-repeat: repeat;
+	font-family: 'Roboto'
 	/*font-family: "Lucida Sans Typewriter", monospace;*/
 }
 body{
@@ -27,7 +28,7 @@ body{
 .bodymain{
 	background-color: #f7f7f7;
 	width: 100%;
-	top: 79px;
+	top: 70px;
 	align-self: center;
 	overflow: scroll;
 	/*padding-right: 15%;
@@ -44,9 +45,9 @@ body{
 }
 
 footer{
-	position:fixed;
+	/* position:fixed;
    	left:0px;
-   	bottom:0px;
+   	bottom:0px; */
 	min-width: 100%;
 	/* background-color: #0a0a0a; */
 	color: #f7f7f7;
