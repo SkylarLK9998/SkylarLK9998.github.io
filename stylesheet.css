@@ -37,6 +37,15 @@ body{
 
 }
 
+.left_portofolio_text{
+	width: 60%;
+}
+
+.right_portofolio_text{
+	text-align: right;
+	margin-left: 40%;
+}
+
 footer{
 	/* position:fixed;
    	left:0px;
